@@ -1,0 +1,48 @@
+@media (max-width: 740px)
+{
+
+    .news div
+    {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+    }
+
+    .news a
+    {
+        width:100%;
+    }
+
+    .staff-people
+    {
+        justify-content:center !important;
+    }
+
+    .staff-person
+    {
+        padding: 2em 2em !important;
+    }
+
+    .products
+    {
+        padding: 30px !important;
+    }
+
+    .products h2
+    {
+        font-size:28px !important;
+    }
+
+    footer
+    {
+        justify-content:center !important;
+    }
+
+    .direitos-autorais
+    {
+        display:none;
+    }
+
+}
