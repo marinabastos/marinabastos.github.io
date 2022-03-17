@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cor-de-fundo {
+    position: fixed;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    overflow: hidden;
+    background-image: url(../img/imagem.png);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    transform: scale(1.2);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+#title {
+    display: block;
+    width: 40%;
+    margin: auto;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28pt;
+    letter-spacing: .05em;
+    text-align: center;
+    line-height: 1em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.493);
+}
+
+.fundo {
+    display: flex;
+    flex-direction: column;
+}
+
+#catalogo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    flex-basis: 100%;
+    height: 0;
+}
+
+.card-container {
+    background-color: transparent;
+    width: 350px;
+    height: 200px;
+    perspective: 1000px;
+    padding: 25px 25px 25px 25px
+}
+
+.card-envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-container:hover .card-envelope {
+    transform: rotateY(-180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #bbbb;
+    color: black;
+    border-radius: 12px;
+}
+
+.card-front h1 {
+    position: absolute;
+}
+
+.card-front img {
+    width: 350px; 
+    height: 200px; 
+    border-radius: 12px;
+}
+
+.card-back {
+    background: rgb(1,0,46);
+    background: linear-gradient(45deg, rgba(1,0,46,1) 0%, rgba(1,165,234,1) 100%);
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 12px;
+}
+
+.movie-info-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.movie-info-top h1 {
+    flex-basis: 80%;
+    text-align: left;
+    padding-left: 2.5%;
+    padding-top: 2px;
+    line-height: .7em;
+    font-size: 19pt;
+}
+
+.movie-info-top h3 {
+    flex-basis: 10%;
+    text-align: right;
+    margin-left: auto;
+    padding-right: 2.5%;
+}
+
+.movie-info-top h4 {
+    flex-basis: 100%;
+    text-align: left;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(241, 241, 241);
+    font-size: 11pt;
+    font-weight: normal;
+}
+
+.movie-info-top p {
+    flex-basis: 100%;
+    text-align: left;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    color: rgb(241, 241, 241);
+    font-size: 10pt;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-info-mid p {
+    flex-basis: 100%;
+    text-align: left;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    padding-top: 5px;
+    font-size: 14pt;
+    height: 64px;
+
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-info-bottom {
+    display: flex;
+    align-self: flex-start;
+}
+
+.movie-similar {
+    padding-top: 2.5%;
+    padding-left: 2.5%;
+    flex-basis: 70%;
+}
+
+.movie-similar h2 {
+    text-align: left;
+    font-size: 11pt;
+}
+
+.movie-similar img {
+    width: 40px;
+    height: 40px;
+}
+
+.similar-imgs {
+    float: left;
+    height: 40px;
+}
+
+.movie-info-bottom h3 {
+    flex-basis: 30%;
+    margin-top: auto;
+    text-align: right;
+    padding-right: 2.5%;
+    padding-bottom: 2.5%;
+}
